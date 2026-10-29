@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+  --accent: #aa88ff;
+  --text: #dddddd;
+  --muted: #8a8a8a;
+  --chip: #1c1c1c;
+  --line: #2a2a2a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000000;
+  color: var(--text);
+  font-family: "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+  font-size: 13px;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hide scrollbar for card list */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Text glow over particles */
+.blend-text {
+  mix-blend-mode: plus-lighter;
+}
+
+/* Underlined links with 300ms hover fade */
+.axon-link {
+  display: block;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin: 4px 0;
+  color: inherit;
+  transition: opacity 300ms ease;
+  pointer-events: auto;
+}
+
+.axon-link:hover {
+  opacity: 0.7;
+}
+
+/* Tag chip button */
+.tag-chip {
+  background: var(--chip);
+  padding: 5px 9px;
+  font-size: 11px;
+  color: #cfcfcf;
+  border: none;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
+  pointer-events: auto;
+  border-radius: 0px;
+}
+
+.tag-chip.active {
+  background: #e6e6e6;
+  color: #000000;
+  font-weight: 600;
+}
+
+.tag-chip:hover:not(.active) {
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+/* Responsive layout overrides */
+@media (max-width: 1100px) {
+  .axon-about {
+    right: 24px !important;
+    width: 320px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .axon-tags {
+    display: none !important;
+  }
+  .axon-list {
+    display: none !important;
+  }
+  .axon-about {
+    left: 24px !important;
+    right: 24px !important;
+    bottom: 24px !important;
+    top: auto !important;
+    transform: none !important;
+    width: auto !important;
+    max-height: 48vh;
+    overflow-y: auto;
+  }
+  .axon-about p {
+    text-align: left !important;
+  }
+}

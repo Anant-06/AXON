@@ -1,0 +1,6 @@
+{
+  "name": "AXON — Motion Research Hub",
+  "description": "An open logbook of real-time rendering studies in particles, fluids and signed surfaces.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
